@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>660</y>
+      <w>200</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Kunden
+--
+Kid:INTEGER
+Kname:VARCHAR(30)
+Knachname:VARCHAR(30)
+--
+PK:Kid
+FK:Adid</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>190</y>
+      <w>190</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Lager
+--
+Laid: INTEGER
+menge: INTEGER
+LaBez: VARCHAR(30)
+--
+PK:Laid</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>340</x>
+      <y>190</y>
+      <w>180</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Artikel
+--
+Aid: INTEGER
+Aname: VARCHAR(30)
+Lpreis:float
+Vpreis:float
+--
+PK:Aid
+FK:Lid
+FK:Kaid
+FK:Laid (U)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>480</y>
+      <w>160</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Kat
+--
+Kaid: INTEGER
+Kaname: VARCHAR(30)
+--
+PK:Kaid
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>540</y>
+      <w>110</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Bestellungen
+--
+Bid:INTEGER
+datum:DATE()
+--
+PK:Aid
+FK:Kid</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>230</y>
+      <w>150</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>
+m1=1
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>340</y>
+      <w>40</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>
+m1=1
+m2=n
+</panel_attributes>
+    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>90</x>
+      <y>570</y>
+      <w>90</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>
+m1=1
+m2=n
+</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>180</x>
+      <y>350</y>
+      <w>110</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Best_Artk
+--
+BAid:INTEGER
+--
+PK:BAid
+FK:Bid
+FK:Aid
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>280</y>
+      <w>80</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>
+m1=n
+m2=1
+
+</panel_attributes>
+    <additional_attributes>10.0;120.0;30.0;120.0;30.0;10.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>440</y>
+      <w>40</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>
+m1=1
+m2=n
+</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>300</x>
+      <y>0</y>
+      <w>170</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Lieferanten
+--
+Lid: INTEGER
+Lvorname: VARCHAR(30)
+Lname: VARCHAR(30)
+--
+PK:Lid
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>370</x>
+      <y>100</y>
+      <w>110</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>
+m1=1
+m2=n
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;80.0;40.0;80.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>340</x>
+      <y>650</y>
+      <w>170</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Adresse
+--
+Adid: INTEGER
+ort: VARCHAR(15)
+str: VARCHAR(20)
+hausnr: VARCHAR(4)
+plz: INTEGER
+--
+PK:Adid
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>190</x>
+      <y>700</y>
+      <w>170</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>
+m1=1
+m2=n
+</panel_attributes>
+    <additional_attributes>150.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+</diagram>
