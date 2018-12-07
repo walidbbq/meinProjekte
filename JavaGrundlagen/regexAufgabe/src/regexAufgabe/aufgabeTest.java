@@ -63,7 +63,7 @@ public class aufgabeTest {
 //		while (mat.find()) {
 //		System.out.print(mat.group() + " ");
 //	}
-		String pattern = "[A-Z]{2}+";
+		String pattern = "[A-Z]{2}[a-z]+";
 		String str = "DEr letzte GRosse GEHEimniskrämer dieseR NAtion";
 		Pattern pat = Pattern.compile(pattern);
 		Matcher mat = pat.matcher(str);
